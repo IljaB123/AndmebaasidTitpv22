@@ -51,3 +51,40 @@ nimetus, kestvus, algus_kuupaev, kirjeldus, opetajaID)
 VALUES (
 'linux', 200, '2024-04-9', 'linux moodul', 1);
 SELECT * FROM oppeaine;
+
+Create TABLE hindamine(
+hindamiseID int Primary key identity(1,1),
+kuupaev varchar(50),
+opilaneID int ,
+oppeaineID int,
+hinne varchar(50));
+SELECT * from hindamine;
+SELECT * from opetaja;
+
+Drop TABLE hindamine
+
+INSERT INTO hindamine(
+ kuupaev, hinne)
+VALUES (
+'2024-04-9','5');
+
+
+Create TABLE opilane(
+opilaneID int Primary key identity(1,1),
+eesnimi varchar(50),
+perenimi varchar(50), 
+isikukood text,
+aadress text);
+SELECT * from oppeaine;
+
+INSERT INTO opilane(
+  eesnimi, perenimi, isikukood, aadress)
+VALUES ('ilja','dada','123','mahtra');
+
+Drop TABLE opilane
+
+
+ALTER TABLE hindamine 
+ADD FOREIGN KEY (oppeaineID) REFERENCES oppeaine(oppeaineID);
+
+UPDATE hindamine SET opilaneID = 1, oppeaineID = 12;
