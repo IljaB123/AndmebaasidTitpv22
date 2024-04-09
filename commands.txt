@@ -1,0 +1,11 @@
+git init AndmebaasidBurzak
+git config --global user.name "Ilja Burzak"
+git config --global user.email "ilja.burzak200p@gmail.com"
+git config --global --list
+user.name=Ilja Burzak
+user.email=ilja.burzak200p@gmail.com
+git status
+---------------------------
+>git commit -a -m "Põhi ab sõnad on lisatud"
+git add .
+kui tekkinud uus fail ja salvestatud siis on vaja add ja commit
